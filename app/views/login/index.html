@@ -1,0 +1,59 @@
+
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS Medical Examiner Prototype
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+
+          <h2>Welcome to the Medical Examiner Service</h2>
+
+          <div class="nhsuk-u-margin-top-9">
+            <div class="nhsuk-form-group">
+              <input class="nhsuk-input" id="login_email" name="login_email" type="text" placeholder="Enter email"
+                required="required">
+            </div>
+            <div class="nhsuk-form-group">
+              <input class="nhsuk-input" id="login_password" name="login_password" type="password" placeholder="Enter password"
+                required="required">
+            </div>
+            <div class="nhsuk-form-group">
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="remember_me" name="remember_me" type="checkbox" value="">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="remember_me">
+                    Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="nhsuk-form-group">
+              <a class="nhsuk-button nhsuk-u-margin-bottom-0" href="/meo/dashboard">
+                Sign in
+              </button>
+            </div>
+            <div class="nhsuk-form-group">
+              <a href="/login/forgotten-password">Forgotten password?</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+{% endblock %}

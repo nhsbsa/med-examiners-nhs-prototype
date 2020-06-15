@@ -1,0 +1,29 @@
+<div id="events" class="timeline">
+  <div id="event1" class="timeline__item timeline__item--grey">
+    <div class="timeline__item__number">1</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">John George Pamphlet died</h3>
+      <h4 class="timeline__item__subheader">John Smith, MEO, Today at 9.20am</h4>
+      <p>D.O.D 15.03.2019</p>
+      <p>T.O.D at 3:35am</p>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  function addEventToTimeline(template) {
+    template = $(template).clone().html();
+    var count = $('.timeline__item').length + 1;
+    template = template.replace(/{number}/g, count);
+    $('#events').append(template);
+  }
+
+  // add events
+  $(document).ready(function () {
+    addEventToTimeline('#latestAdmissionNotesEventTemplate');
+    addEventToTimeline('#medicalHistoryEventTemplate');
+    addEventToTimeline('#meoSummaryEventTemplate');
+    addEventToTimeline('#otherCaseEventTemplate');
+  });
+</script>

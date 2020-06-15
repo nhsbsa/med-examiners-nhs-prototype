@@ -1,0 +1,298 @@
+{# {% if page.url contains 'patient-details' %}
+{% assign pt = true %}
+{% endif %} #}
+<!-- NAME -->
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="given_name">
+        Given name(s)
+      </label>
+      <input class="nhsuk-input" id="given_name" name="given_name" type="text" required="required" value="{% if pt %}John George{% endif %}">
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="surname">
+        Surname
+      </label>
+      <input class="nhsuk-input" id="surname" name="surname" type="text" required="required" value="{% if pt %}Pamphlet{% endif %}">
+    </div>
+  </div>
+</div>
+<!-- // NAME -->
+
+<!-- GENDER -->
+<div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend">
+          Sex
+        </legend>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" {% if pt %}
+              checked{% endif %}>
+            <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
+              Male
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+            <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+              Female
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gender_intersex" name="gender" type="radio" value="intersex">
+            <label class="nhsuk-label nhsuk-radios__label" for="gender_intersex">
+              Intersex
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other">
+            <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
+              Other
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <!-- details appears if other selected -->
+    <div class="nhsuk-form-group nhsuk-form-group--hidden" id="form-group-gender-other">
+      <label class="nhsuk-label" for="gender_more_details">
+        Please enter details below
+      </label>
+      <textarea class="nhsuk-textarea" id="gender_more_details" name="gender_more_details" rows="5" required></textarea>
+    </div>
+  </div>
+</div>
+<!-- // GENDER -->
+
+<!-- NUMBER/HOSTPITALS -->
+<div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="nhs_number">
+        NHS number
+      </label>
+      <input class="nhsuk-input" id="nhs_number" name="nhs_number" type="text" value="{% if pt %}123-456-789{% endif %}"
+        required>
+    </div>
+    <div class="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input data-unknown="#nhs_number" class="nhsuk-checkboxes__input" id="nhs_number_unknown" name="nhs_number_unknown"
+          type="checkbox" value="" {% if pt %} disabled{% endif %}>
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="nhs_number_unknown">
+          Unknown
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="hospital_number">
+        Hospital number
+      </label>
+      <input class="nhsuk-input" id="hospital_number" name="hospital_number" type="text">
+      <div class="nhsuk-input-optional">Optional field</div>
+    </div>
+    <a data-show="#hospital_number2_group" class="nhsuk-u-margin-top-3 js-link">Add another</a>
+    <div id="hospital_number2_group" class="hide">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="hospital_number2">
+          Hospital number 2
+        </label>
+        <input class="nhsuk-input" id="hospital_number2" name="hospital_number2" type="text">
+      </div>
+      <a data-show="#hospital_number3_group" class="nhsuk-u-margin-top-3 js-link">Add another</a>
+    </div>
+    <div class="hide" id="hospital_number3_group">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="hospital_number3">
+          Hospital number 3
+        </label>
+        <input class="nhsuk-input" id="hospital_number3" name="hospital_number3" type="text">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // NUMBER/HOSPITALS -->
+
+<!-- DATES -->
+<div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+        <legend class="nhsuk-fieldset__legend">
+          Date of birth
+        </legend>
+        <div class="nhsuk-date-input" id="dob">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number"
+                pattern="[0-9]*" value="{% if pt %}01{% endif %}" required>
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month"
+                type="number" pattern="[0-9]*" value="{% if pt %}05{% endif %}" required>
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year"
+                type="number" pattern="[0-9]*" value="{% if pt %}1974{% endif %}" required>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input data-disable-if-value="#dob-day,#dob-month,#dob-year" data-unknown="#dob-day,#dob-month,#dob-year" class="nhsuk-checkboxes__input"
+          id="dob_unknown" name="dob_unknown" type="checkbox" value="" {% if pt %} disabled{% endif %}>
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="dob_unknown">
+          Unknown
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset" aria-describedby="dod-hint" role="group">
+            <legend class="nhsuk-fieldset__legend">
+              Date of death
+            </legend>
+            <div class="nhsuk-date-input" id="dob">
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="dod-day">
+                    Day
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dod-day" name="dod-day"
+                    type="number" pattern="[0-9]*" value="{% if pt %}04{% endif %}">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="dod-month">
+                    Month
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dod-month" name="dod-month"
+                    type="number" pattern="[0-9]*" value="{% if pt %}04{% endif %}">
+                </div>
+              </div>
+              <div class="nhsuk-date-input__item">
+                <div class="nhsuk-form-group">
+                  <label class="nhsuk-label nhsuk-date-input__label" for="dod-year">
+                    Year
+                  </label>
+                  <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dod-year" name="dod-year"
+                    type="number" pattern="[0-9]*" value="{% if pt %}2019{% endif %}">
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="nhsuk-checkboxes">
+          <div class="nhsuk-checkboxes__item">
+            <input data-disable-if-value="#dod-day,#dod-month,#dod-year" data-unknown="#dod-day,#dod-month,#dod-year"
+              class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox" value="" {% if pt %}
+              disabled{% endif %}>
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="dod_unknown">
+              Unknown
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-column-one-third">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend">
+              Age
+            </legend>
+            <div class="nhsuk-giant" id="age">{% if pt %}44{% else %}0{% endif %}</div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // DATES -->
+
+<!-- TIME -->
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="time_of_death">
+        Time of death
+      </label>
+      <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="time_of_death" name="time_of_death" type="text"
+        value="{% if pt %}14:06{% endif %}" required>
+    </div>
+    <div class="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input data-unknown="#time_of_death" class="nhsuk-checkboxes__input" id="time_of_death_unknown" name="time_of_death_unknown"
+          type="checkbox" value="" {% if pt %} disabled{% endif %}>
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="time_of_death_unknown">
+          Unknown
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // TIME -->
+
+<!-- LOCATIONS -->
+<div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="death_location">
+        Place where death occurred
+      </label>
+      <select class="nhsuk-select" id="death_location" name="death_location" required>
+        <option value="">Select a location</option>
+        <option value="location_1">Gloustershire Royal Hospital</option>
+        <option value="location_2" {% if pt %} selected{% endif %}>Neverland Hospital</option>
+        <option value="location_3">Sheffield Teaching Hospital</option>
+      </select>
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="me_office">
+        ME Office responsible for case
+      </label>
+      <select class="nhsuk-select" id="me_office" name="me_office" required>
+        <option value="">Select an office</option>
+        <option value="office_1">Gloustershire Royal Hospital</option>
+        <option value="office_2" {% if pt %} selected{% endif %}>Neverland Hospital</option>
+        <option value="office_3">Sheffield Teaching Hospital</option>
+      </select>
+    </div>
+    <div class="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input class="nhsuk-checkboxes__input" id="me_office_out_of_hours" name="me_office_out_of_hours" type="checkbox"
+          value="">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="me_office_out_of_hours">
+          Out of hours/urgent scrutiny has already taken place on this case.
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- // LOCATIONS -->

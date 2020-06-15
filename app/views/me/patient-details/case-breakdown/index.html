@@ -1,0 +1,114 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/patient-details/_header.html" %}
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0">Case breakdown</h2>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-0">
+        <div class="nhsuk-grid-column-one-quarter">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="timeline_filter">
+              Filter
+            </label>
+            <select class="nhsuk-select" id="timeline_filter" name="timeline_filter" required>
+              <option value="" selected>Filter by</option>
+              <option value="itemTemplate1">All events</option>
+              <option value="itemTemplate2">My events</option>
+            </select>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-quarter">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="timeline_sort">
+              Sort
+            </label>
+            <select class="nhsuk-select" id="timeline_sort" name="timeline_sort" required>
+              <option value="" selected>Sort by</option>
+              <option value="itemTemplate1">Newest</option>
+              <option value="itemTemplate2">Oldest</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      {% include "includes/patient-details/case-breakdown/_me-timeline.html" %}
+
+    </div>
+  </div>
+
+</section>
+
+<section id="timeline-section" class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Add a new timeline event or continue editing a draft</h2>
+
+      <div class="nhsuk-grid-row nhsuk-grid-row--align-center nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+        <div class="nhsuk-grid-column-one-half">
+          <h3>You are adding...</h3>
+          <!-- TIMELINE EVENTS -->
+          <div class="nhsuk-form-group">
+            <!-- <label class="nhsuk-label" for="timeline_event_template">
+              ---
+            </label> -->
+            <select class="nhsuk-select" id="timeline_event_template" name="timeline_event_template" required>
+              <option data-info="" value="" selected>Select an event</option>
+              <option data-info="This should cover the details of the patient's latest admission to hospital, such date and time if known, and their route of admission."
+                value="latestAdmissionNotesFormTemplate">Latest hospital admission details</option>
+              <option data-info="This should cover any relevant information about the patient's previous medical and social history that may be helpful for the Medical Examiner when scrutinising the death."
+                value="medicalHistoryFormTemplate">Medical and social history notes</option>
+              <option data-info="This should be completed before the two further parts of the scrutiny process, and should detail the Medical Examiner's independant view of the cause of death based on the information available."
+                value="mePreScrutinyFormTemplate">ME scrutiny</option>
+              <option data-info="This should capture the official discussion between the Medical Examiner and QAP, and it should happen after the ME has completed their pre-scrutiny. It is unable to happen at all for any reason, it should be marked below."
+                value="qapDiscussionFormTemplate">QAP discussion</option>
+              <option data-info="This should capture the official discussion between the ME and the bereaved or representative, offering them an opportunity to raise any concerns or provide additional information."
+                value="bereavedDiscussionFormTemplate">Bereaved/representative discussion</option>
+              <option data-info="This case event should be used to add any other relevant information or context about the case that may be useful for the MEOs or ME."
+                value="otherCaseFormTemplate">Other case info</option>
+            </select>
+          </div>
+          <!-- // TIMELINE EVENTS -->
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div id="eventTemplateInfo"></div>
+        </div>
+      </div>
+
+      <div id="eventTemplateHTML"></div>
+
+    </div>
+  </div>
+
+</section>
+
+{% "includes/include patient-details/case-breakdown/_event-templates.html" %}
+
+{% include "includes/patient-details/case-breakdown/_form-templates.html" %}
+
+{% endblock %}
