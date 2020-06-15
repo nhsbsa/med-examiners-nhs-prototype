@@ -4,46 +4,150 @@
   NHS.UK prototype kit
 {% endblock %}
 
-{% block beforeContent %}
-{% endblock %}
+{% block beforeContent %}{% endblock %}
 
 {% block content %}
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>
-        NHS Medical Examiner prototype
-      </h1>
-      <h2>
-        Current prototype - to change
-      </h2>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <h1>NHS Medical Examiner prototype</h1>
+
+      <p class="nhsuk-body-l">The purpose of the medical examiner system is to:</p>
       <ul>
-          <li><a href="/current/login/login">Login</a></li>
-          <li><a href="/current/add-case">Add new case</a></li>
-          <li><a href="/current/meo/dashboard">MEO - Dashboard</a></li>
-          <li><a href="/current/meo/patient-details">MEO - Patient details</a></li>
-          <li><a href="/current/me/dashboard">ME - Dashboard</a></li>
-          <li><a href="/current/me/patient-details">ME - Patient details</a></li>
+        <li>provide greater safeguards for the public by ensuring proper scrutiny of all non-coronial deaths </li>
+        <li>ensure the appropriate direction of deaths to the coroner</li>
+        <li>provide a better service for the bereaved and an opportunity for them to raise any concerns to a doctor not involved in the care of the deceased</li>
+        <li>improve the quality of death certification</li>
+        <li>improve the quality of mortality data.</li>
       </ul>
+
+      <!--current prototype expanders -->
+      <h2>Current Sprint - NHSBSA Discovery</h2>
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">Discovery - Sprint 0</span>
+        </summary>
+
+        <div class="nhsuk-details__text" id="nhsuk-details__text0" aria-hidden="false">
+
+          <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0" nhsuk-polyfilled="true" id="nhsuk-details1">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="nhsuk-details__text1" tabindex="0" aria-expanded="false">
+              <span class="nhsuk-details__summary-text">
+                <small>Basic restyling of Methods prototype</small>
+              </span>
+            </summary>
+            <div class="nhsuk-details__text" id="nhsuk-details__text1" aria-hidden="true">
+              <h2>Individual pages</h2>
+              <ul>
+                <li>
+                  <a href="/current/login/login">Login</a>
+                </li>
+                <li>
+                  <a href="/current/add-case">Add new case</a>
+                </li>
+                <li>
+                  <a href="/current/meo/meo-dashboard">MEO - Dashboard</a>
+                </li>
+                <li>
+                  <a href="/current/meo/patient-details">MEO - Patient details</a>
+                </li>
+                <li>
+                  <a href="/current/me/me-dashboard">ME - Dashboard</a>
+                </li>
+                <li>
+                  <a href="/current/me/patient-details">ME - Patient details</a>
+                </li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="nhsuk-details nhsuk-expander nhsuk-u-margin-bottom-0" nhsuk-polyfilled="true" id="nhsuk-details1">
+            <summary class="nhsuk-details__summary" role="button" aria-controls="nhsuk-details__text1" tabindex="0" aria-expanded="false">
+              <span class="nhsuk-details__summary-text">
+                <small>Discovery - Iteration 1</small>
+              </span>
+            </summary>
+
+            <div class="nhsuk-details__text" id="nhsuk-details__text1" aria-hidden="true">
+
+              <h2 class="nhsuk-heading-l">Discovery
+                <span class="nhsuk-caption-l nhsuk-caption--bottom">Iteration 1</span>
+              </h2>
+              <div class="nhsuk-action-link">
+                <a class="nhsuk-action-link__link" href="https://www.nhs.uk/service-search/minor-injuries-unit/locationsearch/551">
+                  <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 2a10 10 0 0 0-9.95 9h11.64L9.74 7.05a1 1 0 0 1 1.41-1.41l5.66 5.65a1 1 0 0 1 0 1.42l-5.66 5.65a1 1 0 0 1-1.41 0 1 1 0 0 1 0-1.41L13.69 13H2.05A10 10 0 1 0 12 2z"></path>
+                  </svg>
+                  <span class="nhsuk-action-link__text">Start prototype </span>
+                </a>
+              </div>
+
+              <hr>
+
+              <h3 class="nhsuk-heading-m">Hypothesis A</h3>
+              <p style="background: #DEE0E2; padding: 20px;">
+                <strong>We believe</strong> ... 
+                <strong>will be a useful feature for</strong> ...
+                <strong>as it will</strong> ...
+                <strong>This will</strong> ...
+              </p>
+
+              <hr>
+
+              <h3 class="nhsuk-heading-m">What we created:</h3>
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                  <li>...</li>
+                </ul>
+              <h3 class="nhsuk-heading-m">What we plan to test:</h3>
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                  <li>...</li>
+                </ul>
+              <h3 class="nhsuk-heading-m">What we found:</h3>
+                <ul class="nhsuk-list nhsuk-list--bullet">
+                  <li>...</li>
+                </ul>
+
+            </div>
+          </details>
+
+        </div>
+
+      </details>
 
       <hr>
-
-      <h2>
-        Previous prototype - Alpha
-      </h2>
-      <ul>
-          <li><a href="/alpha/login">Login</a></li>
-          <li><a href="/alpha/add-case">Add new case</a></li>
-          <li><a href="/alpha/meo/dashboard">MEO - Dashboard</a></li>
-          <li><a href="/alpha/meo/patient-details">MEO - Patient details</a></li>
-          <li><a href="/alpha/me/dashboard">ME - Dashboard</a></li>
-          <li><a href="/alpha/me/patient-details">ME - Patient details</a></li>
-      </ul>
-
-      <a href="https://github.com/iamdriz/nhs-medical-examiner">GitHub link to Jekyll prototype</a>
-
-
-
+      
+      <h2>Alpha - Methods</h2>
+      <details class="nhsuk-details nhsuk-expander">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">Alpha</span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <ul>
+            <li>
+              <a href="/alpha/login">Login</a>
+            </li>
+            <li>
+              <a href="/alpha/add-case">Add new case</a>
+            </li>
+            <li>
+              <a href="/alpha/meo/dashboard">MEO - Dashboard</a>
+            </li>
+            <li>
+              <a href="/alpha/meo/patient-details">MEO - Patient details</a>
+            </li>
+            <li>
+              <a href="/alpha/me/dashboard">ME - Dashboard</a>
+            </li>
+            <li>
+              <a href="/alpha/me/patient-details">ME - Patient details</a>
+            </li>
+          </ul>
+          <a href="https://github.com/iamdriz/nhs-medical-examiner">GitHub link to Jekyll prototype</a>
+        </div>
+      </details>
     </div>
   </div>
+
 {% endblock %}
