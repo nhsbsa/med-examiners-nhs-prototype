@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h1>MEO Dashboard</h1>
+
+      <div class="nhsuk-stats">
+        <div class="nhsuk-stat">
+          <h3 class="nhsuk-stat__header">Displaying cases at</h3>
+          <p class="nhsuk-stat__content">Gloustershire Royal Hospital</p>
+        </div>
+        <div class="nhsuk-stat">
+          <h3 class="nhsuk-stat__header">Total number of cases</h3>
+          <p class="nhsuk-stat__content nhsuk-stat__content--large">27</p>
+        </div>
+        <div class="nhsuk-stat">
+          <h3 class="nhsuk-stat__header">Number of urgent cases</h3>
+          <p class="nhsuk-stat__content nhsuk-stat__content--large">6</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nshuk-section">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <div class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">
+        <p>Filter cases by place and person</p>
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <select class="nhsuk-select" id="filter_place" name="filter_place">
+                <option value="1">Gloustershire Royal Hospital</option>
+                <option value="2">Sheffield Teaching Hospital</option>
+              </select>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half">
+            <div class="nhsuk-form-group">
+              <select class="nhsuk-select" id="filter_person" name="filter_person">
+                <option value="1">My cases</option>
+                <option value="2">All cases</option>
+                <option value="3">Dr Gill Kline</option>
+                <option value="4">Dr Abby Anglesford, ME</option>
+                <option value="5">Borris Barrington, MEO</option>
+                <option value="6">Dr Cathy Copeland, ME</option>
+                <option value="7">Dr Davina Dangerfield, ME</option>
+                <option value="8">Edward Earlsford, MEO</option>
+                <option value="9">Dr Ben Ryan-Stevenson, ME</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-0">
+        <p>Filter cases further by status</p>
+        <div class="nhsuk-cards">
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">19</div>
+              <div class="nhsuk-card__description">admission notes have been entererd</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">17</div>
+              <div class="nhsuk-card__description">are ready for ME scrutiny</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">8</div>
+              <div class="nhsuk-card__description">are unassigned</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">7</div>
+              <div class="nhsuk-card__description">have been scrutinised by ME</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">6</div>
+              <div class="nhsuk-card__description">are pending admission notes</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">5</div>
+              <div class="nhsuk-card__description">are pending discussion with a QAP</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">3</div>
+              <div class="nhsuk-card__description">are pending discussion with a representative</div>
+            </div>
+          </div>
+          <div class="nhsuk-card">
+            <div class="nhsuk-card__inner">
+              <div class="nhsuk-card__number">2</div>
+              <div class="nhsuk-card__description">have final case outcomes outstanding</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-quarter">&nbsp;</div>
+        <div class="nhsuk-grid-column-one-quarter">&nbsp;</div>
+        <div class="nhsuk-grid-column-one-quarter">&nbsp;</div>
+        <div class="nhsuk-grid-column-one-quarter">
+          <div class="nhsuk-form-group">
+            <select class="nhsuk-select" id="filter_urgency" name="filter_urgency">
+              <option value="1">Urgency</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      {% include "current/includes/_cases.html" ignore missing %} 
+
+    </div>
+  </div>
+
+</section>
+
+{% endblock %}

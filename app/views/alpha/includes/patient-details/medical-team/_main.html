@@ -1,0 +1,351 @@
+{% include "alpha/includes/patient-details/_header.html" %}
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Medical team</h2>
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Doctor(s) information</h3>
+
+      <div id="consultants">
+        <!-- CONSULTANT 1 -->
+        <div class="consultant nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6" id="consultant1">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="consultant1_name">
+                  Consultant or GP in charge of care
+                </label>
+                <input class="nhsuk-input nhsuk-input-required" id="consultant1_name" name="consultant1_name" type="text">
+                <div class="nhsuk-input-optional">Required field</div>
+              </div>
+            </div>
+            <div class="nhsuk-grid-column-one-half">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="consultant1_role">
+                  Role
+                </label>
+                <input class="nhsuk-input" id="consultant1_role" name="consultant1_role" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-half">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="consultant1_organisation">
+                  Organisation
+                </label>
+                <input class="nhsuk-input" id="consultant1_organisation" name="consultant1_organisation" type="text">
+              </div>
+              <a data-show="#note-box1" class="js-link">Add a note</a>
+            </div>
+            <div class="nhsuk-grid-column-one-half">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="consultant1_number">
+                  Personal phone / bleep number
+                </label>
+                <input class="nhsuk-input" id="consultant1_number" name="consultant1_number" type="text">
+              </div>
+            </div>
+          </div>
+          <div id="note-box1" class="nhsuk-grid-row hide">
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="consultant1_notes">
+                  Additional notes
+                </label>
+                <textarea class="nhsuk-textarea" id="consultant1_notes" name="consultant1_notes" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- // CONSULTANT 1 -->
+      </div>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+        <div class="nhsuk-grid-column-full">
+          <button data-duplicate-element=".consultant" data-duplicate-from="#consultant-template" data-duplicate-to="#consultants"
+            class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+            Add another consultant
+          </button>
+          <!--<button class="nhsuk-button nhsuk-button--secondary" data-remove-element=".consultant" data-remove-from="#consultants">
+            Remove consultant above
+          </button>-->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">GP information</h3>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="gp_name">
+              Full name
+            </label>
+            <input class="nhsuk-input" id="gp_name" name="gp_name" type="text">
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="gp_role">
+              Surgery contact number
+            </label>
+            <input class="nhsuk-input" id="gp_role" name="gp_role" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="gp_organisation">
+              Surgery
+            </label>
+            <input class="nhsuk-input" id="gp_organisation" name="gp_organisation" type="text">
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="gp_number">
+              Surgery address
+            </label>
+            <input class="nhsuk-input" id="gp_number" name="gp_number" type="text">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">QAP information</h3>
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Enter the details of the doctor who will be writing the
+        MCCD</p>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="qap_name">
+              Full name
+            </label>
+            <input class="nhsuk-input" id="qap_name" name="qap_name" type="text">
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="qap_role">
+              Role
+            </label>
+            <input class="nhsuk-input" id="qap_role" name="qap_role" type="text">
+          </div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="qap_organisation">
+              Organisation
+            </label>
+            <input class="nhsuk-input" id="qap_organisation" name="qap_organisation" type="text">
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="qap_number">
+              Personal phone / bleep number
+            </label>
+            <input class="nhsuk-input" id="qap_number" name="qap_number" type="text">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Nursing team information</h3>
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Add any relevant information about the nursing team involved in care</p>
+
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-full">
+          <div class="nhsuk-form-group">
+            <!--<label class="nhsuk-label" for="nursing_team_information">
+              Nursing team information
+            </label>-->
+            <textarea class="nhsuk-textarea" id="nursing_team_information" name="nursing_team_information" rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Medical Examiner Team</h3>
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">The team assigned to work on this case</p>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="team_me">
+              MEO assigned to case
+            </label>
+            <select class="nhsuk-select" id="team_me" name="team_me">
+              <option value="" selected>Select an MEO</option>
+              <option value="Joan Smith">Joan Smith</option>
+            </select>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="team_meo">
+              ME assigned to case
+            </label>
+            <select class="nhsuk-select" id="team_meo" name="team_meo">
+              <option value="" selected>Select an ME</option>
+              <option value="Dr Alan Wyn Joans">Dr Alan Wyn Joans</option>
+              <option value="Dr Frank Brunu">Dr Frank Brunu</option>
+              <option value="Dr Tia Sanchez">Dr Tia Sanchez</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="assignment">
+        <p class="gray">An ME should only be assigned once the case is ready for them and the Latest admission notes and MEO summary
+          have been added to the Case breakdown.</p>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<template id="assign1-template">
+  <p class="gray">An ME should only be assigned once the case is ready for them and the Latest admission notes and MEO summary
+    have been added to the Case breakdown.</p>
+</template>
+
+<template id="assign2-template">
+  <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend">
+        {legend}
+      </legend>
+      <div class="nhsuk-radios nhsuk-radios--inline">
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="assign_me_yes" name="assign_me" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="assign_me_yes">
+            Yes
+          </label>
+        </div>
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="assign_me_no" name="assign_me" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="assign_me_no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <p class="gray">They will receive a notification email informing them of this assignment.</p>
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-3">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary" data-assign-continue disabled>
+        Continue
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="consultant-template">
+  <div class="consultant nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6" id="consultant{number}">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="consultant{number}_name">
+            Consultant or GP in charge of care
+          </label>
+          <input class="nhsuk-input nhsuk-input-required" id="consultant{number}_name" name="consultant{number}_name" type="text">
+          <div class="nhsuk-input-optional">Required field</div>
+        </div>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="consultant{number}_role">
+            Role
+          </label>
+          <input class="nhsuk-input" id="consultant{number}_role" name="consultant{number}_role" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="consultant{number}_organisation">
+            Organisation
+          </label>
+          <input class="nhsuk-input" id="consultant{number}_organisation" name="consultant{number}_organisation" type="text">
+        </div>
+        <a data-show="#note-box{number}" class="js-link">Add a note</a>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="consultant{number}_number">
+            Personal phone / bleep number
+          </label>
+          <input class="nhsuk-input" id="consultant{number}_number" name="consultant{number}_number" type="text">
+        </div>
+      </div>
+    </div>
+    <div id="note-box{number}" class="nhsuk-grid-row hide">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="consultant{number}_notes">
+            Additional notes
+          </label>
+          <textarea class="nhsuk-textarea" id="consultant{number}_notes" name="consultant{number}_notes" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+      <div class="nhsuk-grid-column-full">
+        <!--<button data-duplicate-element=".consultant" data-duplicate-from="#consultant-template" data-duplicate-to="#consultants"
+         class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+          Add another consultant
+        </button>-->
+        <button class="nhsuk-button nhsuk-button--secondary" data-remove-element="#consultant{number}">
+          Remove consultant above
+        </button>
+      </div>
+    </div>
+  </div>
+</template>

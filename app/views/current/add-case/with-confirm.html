@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<section class="nhsuk-section nhsuk-section--white">
+
+    <div class="nhsuk-width-container">
+        <div class="nhsuk-main-wrapper">
+            <div class="case-added-message">
+                <svg class="nhsuk-icon nhsuk-icon--size-15 nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg"
+                     viewbox="0 0 24 24" aria-hidden="true" fill="none">
+                    <path stroke-width="4" stroke-linecap="round" stroke="#007f3b" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+                </svg>
+                James Anthony Gould has been added to the system.
+            </div>
+            <h1 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Add a new case</h1>
+            <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Primary information</h2>
+
+            <form id="add-case" method="POST" action="">
+
+                {% include "current/includes/_person.html" %}
+
+                <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+                    <div class="nhsuk-grid-column-one-half">
+                        <a class="nhsuk-button" href="/meo/patient-details">
+                            Create case and continue
+                        </a>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+                <div class="nhsuk-grid-column-one-half">
+                    <h3 class="">Adding multiple cases at once?</h3>
+                    <a class="nhsuk-button nhsuk-button--secondary" href='/add-case'>
+                        Add another case
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+{% endblock %}

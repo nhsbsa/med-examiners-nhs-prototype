@@ -1,0 +1,78 @@
+<div class="nhsuk-width-container">
+  <div class="nhsuk-main-wrapper">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <h1 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">John George Pamphlet</h1>
+        <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0">NHS No. 123-456-789</h2>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <ul class="checklist nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-0">
+          <li class="checklist__item">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path stroke-width="4" stroke-linecap="round" stroke="#999999" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+            </svg>
+            Admission notes entered
+          </li>
+          <li class="checklist__item">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path stroke-width="4" stroke-linecap="round" stroke="#999999" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+            </svg>
+            Ready for scrutiny
+          </li>
+          <li class="checklist__item">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path stroke-width="4" stroke-linecap="round" stroke="#999999" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+            </svg>
+            Assigned to ME/MEO
+          </li>
+          <li class="checklist__item">
+            <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+              <path stroke-width="4" stroke-linecap="round" stroke="#999999" d="M18.4 7.8l-8.5 8.4L5.6 12"></path>
+            </svg>
+            Scrutiny complete
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# {% if page.url contains '/meo' %} #}
+<ul class="nhsuk-tabs">
+  <li class="nhsuk-tab">
+    <a {% if page.url=='/meo/patient-details/' %} class="selected" {% endif %} href="/meo/patient-details/">Patient details</a>
+  </li>
+  <li class="nhsuk-tab">
+    <a {% if page.url=='/meo/patient-details/medical-team/' %} class="selected" {% endif %} href="/meo/patient-details/medical-team/">Medical
+      team</a>
+  </li>
+  <li class="nhsuk-tab">
+    <a {% if page.url=='/meo/patient-details/case-breakdown/' %} class="selected" {% endif %} href="/meo/patient-details/case-breakdown/">Case
+      breakdown</a>
+  </li>
+  <li class="nhsuk-tab">
+    <a {% if page.url=='/meo/patient-details/case-outcomes/' %} class="selected" {% endif %} href="/meo/patient-details/case-outcomes/">Case
+      outcomes</a>
+  </li>
+</ul>
+{# {% else %}
+<ul class="nhsuk-tabs">
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/' %} class="selected" {% endif %} href="/me/patient-details/">Patient details</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/medical-team/' %} class="selected" {% endif %} href="/me/patient-details/medical-team/">Medical
+        team</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/case-breakdown/' %} class="selected" {% endif %} href="/me/patient-details/case-breakdown/">Case
+        breakdown</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/case-outcomes/' %} class="selected" {% endif %} href="/me/patient-details/case-outcomes/">Case
+        outcomes</a>
+    </li>
+  </ul>
+{% endif %} #}
